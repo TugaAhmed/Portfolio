@@ -122,9 +122,9 @@ with st.container() :
 		st.write("- Al-Neelain University")
 		st.write("- Ankara Yıldırım Beyazıt Üniversitesi")
 
-	with right_col : # add GIF image in the right col 
-		lottie_ai_gif = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_rI827y2g0K.json")
-		st_lottie(lottie_ai_gif, height=400, width=600, key="coding")
+	# with right_col : # add GIF image in the right col 
+	# 	lottie_ai_gif = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_rI827y2g0K.json")
+	# 	st_lottie(lottie_ai_gif, height=400, width=600, key="coding")
 
 
 
