@@ -82,29 +82,42 @@ with st.container() :
 			mail_image = Image.open(str(current_dir / "images" / "gmail.png"))
 			github_image = Image.open(str(current_dir / "images" / "github.png"))
 			linkedin_image = Image.open(str(current_dir / "images" / "linkedin.png"))
+
 			with st.container():
-				col1, col2 = st.columns([1, 20])
-				#   --------- Mail -------
+				col1, col2 , col3 = st.columns(3)
+
 				with col1:
-					st.image(mail_image, width=20)
-				with col2:
 					st.write(EMAIL)
-
-			with st.container():
-				col1, col2 = st.columns([1, 20])
-				#   --------- LinkedIn -------
-				with col1:
-					st.image(linkedin_image, width=20)
-				with col2:
+				with col2 :
 					st.markdown("[LinkedIn](%s)" % LinkedIn)
-
-			with st.container():
-				col1, col2 = st.columns([1, 20])
-				#   --------- LinkedIn -------
-				with col1:
-					st.image(github_image, width=20)
-				with col2:
+				with col3:
 					st.markdown("[GitHub](%s)" % GitHub)
+
+
+
+			# with st.container():
+			# 	col1, col2 = st.columns([1, 20])
+			# 	#   --------- Mail -------
+			# 	with col1:
+			# 		st.image(mail_image, width=20)
+			# 	with col2:
+			# 		st.write(EMAIL)
+
+			# with st.container():
+			# 	col1, col2 = st.columns([1, 20])
+			# 	#   --------- LinkedIn -------
+			# 	with col1:
+			# 		st.image(linkedin_image, width=20)
+			# 	with col2:
+			# 		st.markdown("[LinkedIn](%s)" % LinkedIn)
+
+			# with st.container():
+			# 	col1, col2 = st.columns([1, 20])
+			# 	#   --------- LinkedIn -------
+			# 	with col1:
+			# 		st.image(github_image, width=20)
+			# 	with col2:
+			# 		st.markdown("[GitHub](%s)" % GitHub)
 
 		# with st.container() :
 		# 		# --- Social Media --------
