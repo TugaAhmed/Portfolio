@@ -33,7 +33,7 @@ with open(resume_file, "rb") as pdf_file:
 
 def load_lottieurl(url):
     '''
-        Request GIF json file from lotti 
+        Request GIF json file from lotti website
         return GIF json file
     '''
     r = requests.get(url)
@@ -83,20 +83,49 @@ with st.container() :
 			github_image = Image.open(str(current_dir / "images" / "github.png"))
 			linkedin_image = Image.open(str(current_dir / "images" / "linkedin.png"))
 			with st.container():
-				col1, col2 , col3 , col4 , col5 , col6= st.columns([1, 15 , 1 , 10 , 1 , 10])
+				col1, col2 = st.columns([1, 20])
 				#   --------- Mail -------
 				with col1:
 					st.image(mail_image, width=20)
 				with col2:
 					st.write(EMAIL)
-				with col3:
+
+			with st.container():
+				col1, col2 = st.columns([1, 20])
+				#   --------- LinkedIn -------
+				with col1:
 					st.image(linkedin_image, width=20)
-				with col4:
+				with col2:
 					st.markdown("[LinkedIn](%s)" % LinkedIn)
-				with col5:
+
+			with st.container():
+				col1, col2 = st.columns([1, 20])
+				#   --------- LinkedIn -------
+				with col1:
 					st.image(github_image, width=20)
-				with col6:
+				with col2:
 					st.markdown("[GitHub](%s)" % GitHub)
+
+		# with st.container() :
+		# 		# --- Social Media --------
+		# 	mail_image = Image.open(str(current_dir / "images" / "gmail.png"))
+		# 	github_image = Image.open(str(current_dir / "images" / "github.png"))
+		# 	linkedin_image = Image.open(str(current_dir / "images" / "linkedin.png"))
+		# 	with st.container():
+		# 		col1, col2 , col3 , col4 , col5 , col6= st.columns([1, 15 , 1 , 10 , 1 , 10])
+		# 		#   --------- Mail -------
+		# 		with col1:
+		# 			st.image(mail_image, width=20)
+		# 		with col2:
+		# 			st.write(EMAIL)
+		# 		with col3:
+		# 			st.image(linkedin_image, width=20)
+		# 		with col4:
+		# 			st.markdown("[LinkedIn](%s)" % LinkedIn)
+		# 		with col5:
+		# 			st.image(github_image, width=20)
+		# 		with col6:
+		# 			st.markdown("[GitHub](%s)" % GitHub)
 
 
 
